@@ -17,15 +17,15 @@
 package rpc
 
 import (
-	"github.com/centrifuge/go-substrate-rpc-client/v4/client"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpc/author"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpc/beefy"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpc/chain"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpc/mmr"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpc/offchain"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpc/state"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpc/system"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v4/client"
+	"github.com/dojimanetwork/go-polka-rpc/v4/rpc/author"
+	"github.com/dojimanetwork/go-polka-rpc/v4/rpc/beefy"
+	"github.com/dojimanetwork/go-polka-rpc/v4/rpc/chain"
+	"github.com/dojimanetwork/go-polka-rpc/v4/rpc/mmr"
+	"github.com/dojimanetwork/go-polka-rpc/v4/rpc/offchain"
+	"github.com/dojimanetwork/go-polka-rpc/v4/rpc/state"
+	"github.com/dojimanetwork/go-polka-rpc/v4/rpc/system"
+	"github.com/dojimanetwork/go-polka-rpc/v4/types"
 )
 
 type RPC struct {

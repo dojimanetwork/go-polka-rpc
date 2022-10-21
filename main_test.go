@@ -21,11 +21,11 @@ import (
 	"math/big"
 	"time"
 
-	gsrpc "github.com/centrifuge/go-substrate-rpc-client/v4"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/config"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/signature"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types/codec"
+	gsrpc "github.com/dojimanetwork/go-polka-rpc/v4"
+	"github.com/dojimanetwork/go-polka-rpc/v4/config"
+	"github.com/dojimanetwork/go-polka-rpc/v4/signature"
+	"github.com/dojimanetwork/go-polka-rpc/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
 )
 
 func Example_simpleConnect() {
