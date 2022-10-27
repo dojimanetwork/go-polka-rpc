@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 )
 
 // StorageChangeSet contains changes from storage subscriptions

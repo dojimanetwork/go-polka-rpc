@@ -22,7 +22,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/centrifuge/go-substrate-rpc-client/v4/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 )
 
