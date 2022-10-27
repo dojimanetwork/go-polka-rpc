@@ -19,6 +19,7 @@ package signature
 import (
 	"errors"
 	"fmt"
+	"github.com/dojimanetwork/go-subkey"
 	"os"
 	"strconv"
 
