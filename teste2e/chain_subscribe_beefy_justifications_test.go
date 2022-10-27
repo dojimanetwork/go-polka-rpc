@@ -22,10 +22,10 @@ import (
 	"testing"
 	"time"
 
-	gsrpc "github.com/centrifuge/go-substrate-rpc-client/v4"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/config"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types/codec"
+	gsrpc "github.com/dojimanetwork/go-polka-rpc/v5"
+	"github.com/dojimanetwork/go-polka-rpc/v5/config"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 	"github.com/stretchr/testify/assert"
 )
 

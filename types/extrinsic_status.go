@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/centrifuge/go-substrate-rpc-client/v4/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
 )
 
 // ExtrinsicStatus is an enum containing the result of an extrinsic submission

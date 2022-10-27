@@ -1,4 +1,4 @@
-module github.com/centrifuge/go-substrate-rpc-client/v4
+module github.com/dojimanetwork/go-polka-rpc/v5
 
 go 1.18
 
@@ -12,13 +12,12 @@ require (
 	github.com/pierrec/xxHash v0.1.5
 	github.com/rs/cors v1.8.2
 	github.com/stretchr/testify v1.7.0
-	github.com/vedhavyas/go-subkey v1.0.3
+	github.com/dojimanetwork/go-subkey v1.0.4
 	golang.org/x/crypto v0.0.0-20211117183948-ae814b36b871
 	gopkg.in/natefinch/npipe.v2 v2.0.0-20160621034901-c1b8fa8bdcce
 )
 
 require (
-	github.com/ChainSafe/go-schnorrkel v1.0.0 // indirect
 	github.com/StackExchange/wmi v0.0.0-20180116203802-5d049714c4a6 // indirect
 	github.com/cosmos/go-bip39 v1.0.0 // indirect
 	github.com/decred/base58 v1.0.3 // indirect

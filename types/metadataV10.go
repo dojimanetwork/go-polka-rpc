@@ -22,9 +22,9 @@ import (
 	"hash"
 	"strings"
 
-	ghash "github.com/centrifuge/go-substrate-rpc-client/v4/hash"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/scale"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/xxhash"
+	ghash "github.com/dojimanetwork/go-polka-rpc/v5/hash"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/xxhash"
 )
 
 // Modelled after packages/types/src/Metadata/v10/Metadata.ts
