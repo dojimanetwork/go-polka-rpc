@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 )
 
 // H160 is a hash containing 160 bits (20 bytes), typically used in blocks, extrinsics and as a sane default

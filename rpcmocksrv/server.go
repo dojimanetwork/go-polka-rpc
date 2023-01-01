@@ -21,7 +21,7 @@ import (
 	"strconv"
 	"time"
 
-	gethrpc "github.com/dojimanetwork/go-polka-rpc/v4/gethrpc"
+	gethrpc "github.com/dojimanetwork/go-polka-rpc/v5/gethrpc"
 )
 
 type Server struct {

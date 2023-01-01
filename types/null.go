@@ -17,7 +17,7 @@
 package types
 
 import (
-	"github.com/dojimanetwork/go-polka-rpc/v4/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
 )
 
 // Null is a type that does not contain anything (apart from null)

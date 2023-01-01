@@ -20,10 +20,10 @@ import (
 	"errors"
 	"fmt"
 	"github.com/dojimanetwork/go-subkey"
-	"github.com/dojimanetwork/go-subkey/sr25519"
 	"os"
 	"strconv"
 
+	"github.com/dojimanetwork/go-subkey/sr25519"
 	"golang.org/x/crypto/blake2b"
 )
 

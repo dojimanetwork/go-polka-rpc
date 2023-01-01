@@ -17,7 +17,7 @@
 package chain
 
 import (
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 )
 
 // GetFinalizedHead returns the hash of the last finalized block in the canon chain

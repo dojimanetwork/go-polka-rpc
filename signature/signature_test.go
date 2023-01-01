@@ -20,8 +20,8 @@ import (
 	"crypto/rand"
 	"testing"
 
-	. "github.com/dojimanetwork/go-polka-rpc/v4/signature"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	. "github.com/dojimanetwork/go-polka-rpc/v5/signature"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 	"github.com/stretchr/testify/assert"
 )
 

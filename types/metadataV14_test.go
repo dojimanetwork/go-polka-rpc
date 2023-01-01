@@ -19,7 +19,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 	"github.com/stretchr/testify/assert"
 )
 

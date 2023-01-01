@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
 )
 
 // Data is a raw data structure, containing raw bytes that are not decoded/encoded (without any length encoding).

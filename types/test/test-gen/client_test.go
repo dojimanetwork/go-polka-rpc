@@ -27,16 +27,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 
-	gsrpc "github.com/dojimanetwork/go-polka-rpc/v4"
-	mockClient "github.com/dojimanetwork/go-polka-rpc/v4/client/mocks"
-	mockChain "github.com/dojimanetwork/go-polka-rpc/v4/rpc/chain/mocks"
-	mockState "github.com/dojimanetwork/go-polka-rpc/v4/rpc/state/mocks"
+	gsrpc "github.com/dojimanetwork/go-polka-rpc/v5"
+	mockClient "github.com/dojimanetwork/go-polka-rpc/v5/client/mocks"
+	mockChain "github.com/dojimanetwork/go-polka-rpc/v5/rpc/chain/mocks"
+	mockState "github.com/dojimanetwork/go-polka-rpc/v5/rpc/state/mocks"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/rpc"
-	"github.com/dojimanetwork/go-polka-rpc/v4/rpcmocksrv"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/rpc"
+	"github.com/dojimanetwork/go-polka-rpc/v5/rpcmocksrv"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 	"github.com/stretchr/testify/assert"
 )
 

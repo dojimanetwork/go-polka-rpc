@@ -19,8 +19,8 @@
 package author
 
 import (
-	"github.com/dojimanetwork/go-polka-rpc/v4/client"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/client"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 )
 
 type Author interface {

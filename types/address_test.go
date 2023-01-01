@@ -23,8 +23,8 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcutil/base58"
-	"github.com/dojimanetwork/go-polka-rpc/v4/hash"
-	"github.com/dojimanetwork/go-polka-rpc/v4/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/hash"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
 	fuzz "github.com/google/gofuzz"
 	"github.com/stretchr/testify/assert"
 )

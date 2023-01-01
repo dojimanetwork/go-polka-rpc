@@ -17,9 +17,9 @@
 package state
 
 import (
-	"github.com/dojimanetwork/go-polka-rpc/v4/client"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/client"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 )
 
 // GetChildStorage retreives the child storage for a key and decodes them into the provided interface. Ok is true if the

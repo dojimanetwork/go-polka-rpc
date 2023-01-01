@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
 )
 
 // Modelled after packages/types/src/Metadata/v9/Metadata.ts

@@ -3,8 +3,8 @@
 package mocks
 
 import (
-	state "github.com/dojimanetwork/go-polka-rpc/v4/rpc/state"
-	types "github.com/dojimanetwork/go-polka-rpc/v4/types"
+	state "github.com/dojimanetwork/go-polka-rpc/v5/rpc/state"
+	types "github.com/dojimanetwork/go-polka-rpc/v5/types"
 	mock "github.com/stretchr/testify/mock"
 )
 

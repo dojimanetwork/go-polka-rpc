@@ -17,8 +17,8 @@
 package author
 
 import (
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 )
 
 // SubmitExtrinsic will submit a fully formatted extrinsic for block inclusion

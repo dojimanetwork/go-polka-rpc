@@ -19,9 +19,9 @@ package types
 import (
 	"fmt"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/scale"
-	"github.com/dojimanetwork/go-polka-rpc/v4/signature"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/signature"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 )
 
 // ExtrinsicPayloadV3 is a signing payload for an Extrinsic. For the final encoding, it is variable length based on

@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/signature"
+	"github.com/dojimanetwork/go-polka-rpc/v5/signature"
 	fuzz "github.com/google/gofuzz"
 	"github.com/stretchr/testify/assert"
 )

@@ -19,7 +19,7 @@ package types
 import (
 	"math/big"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
 )
 
 // OptionU8 is a structure that can store a U8 or a missing value

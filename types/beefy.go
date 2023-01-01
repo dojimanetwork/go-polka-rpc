@@ -18,8 +18,8 @@
 package types
 
 import (
-	"github.com/dojimanetwork/go-polka-rpc/v4/scale"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 )
 
 // PayloadItem ...

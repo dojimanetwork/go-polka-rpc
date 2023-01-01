@@ -19,7 +19,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
 )
 
 // DigestItem specifies the item in the logs of a digest

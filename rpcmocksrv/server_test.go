@@ -19,7 +19,7 @@ package rpcmocksrv
 import (
 	"testing"
 
-	gethrpc "github.com/dojimanetwork/go-polka-rpc/v4/gethrpc"
+	gethrpc "github.com/dojimanetwork/go-polka-rpc/v5/gethrpc"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -17,7 +17,7 @@
 package system
 
 import (
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 )
 
 // Version retrieves the version of the node

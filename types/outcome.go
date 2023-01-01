@@ -17,7 +17,7 @@
 package types
 
 import (
-	"github.com/dojimanetwork/go-polka-rpc/v4/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
 )
 
 type Outcome struct {

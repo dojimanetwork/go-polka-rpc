@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"testing"
 
-	gsrpc "github.com/dojimanetwork/go-polka-rpc/v4"
-	"github.com/dojimanetwork/go-polka-rpc/v4/config"
+	gsrpc "github.com/dojimanetwork/go-polka-rpc/v5"
+	"github.com/dojimanetwork/go-polka-rpc/v5/config"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -3,7 +3,7 @@ package types
 import (
 	"encoding/json"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 )
 
 // GenerateMMRProofResponse contains the generate proof rpc response

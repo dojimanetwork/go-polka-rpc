@@ -22,7 +22,7 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 )
 
 func main() { //nolint: funlen

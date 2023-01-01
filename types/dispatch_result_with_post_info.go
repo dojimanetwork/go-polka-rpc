@@ -16,7 +16,7 @@
 
 package types
 
-import "github.com/dojimanetwork/go-polka-rpc/v4/scale"
+import "github.com/dojimanetwork/go-polka-rpc/v5/scale"
 
 // PostDispatchInfo is used in DispatchResultWithPostInfo.
 // Weight information that is only available post dispatch.

@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/rpc/author"
-	"github.com/dojimanetwork/go-polka-rpc/v4/signature"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/rpc/author"
+	"github.com/dojimanetwork/go-polka-rpc/v5/signature"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -26,11 +26,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 
-	gsrpc "github.com/dojimanetwork/go-polka-rpc/v4"
+	gsrpc "github.com/dojimanetwork/go-polka-rpc/v5"
 )
 
 type ClientOpts struct {

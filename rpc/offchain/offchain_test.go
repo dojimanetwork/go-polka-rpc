@@ -20,8 +20,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/client"
-	"github.com/dojimanetwork/go-polka-rpc/v4/config"
+	"github.com/dojimanetwork/go-polka-rpc/v5/client"
+	"github.com/dojimanetwork/go-polka-rpc/v5/config"
 )
 
 var testOffchain Offchain

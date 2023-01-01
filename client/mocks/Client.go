@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	rpc "github.com/dojimanetwork/go-polka-rpc/v4/gethrpc"
+	rpc "github.com/dojimanetwork/go-polka-rpc/v5/gethrpc"
 	mock "github.com/stretchr/testify/mock"
 )
 

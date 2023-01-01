@@ -16,7 +16,7 @@
 
 package types
 
-import "github.com/dojimanetwork/go-polka-rpc/v4/scale"
+import "github.com/dojimanetwork/go-polka-rpc/v5/scale"
 
 // Modelled after packages/types/src/Metadata/v10/toV11.ts
 type MetadataV11 struct {

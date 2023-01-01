@@ -22,8 +22,8 @@ import (
 	"hash"
 	"strings"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/scale"
-	"github.com/dojimanetwork/go-polka-rpc/v4/xxhash"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/xxhash"
 	"golang.org/x/crypto/blake2b"
 )
 

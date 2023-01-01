@@ -19,8 +19,8 @@ package offchain
 import (
 	"fmt"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 )
 
 // StorageKind ...

@@ -17,8 +17,8 @@
 package state
 
 import (
-	"github.com/dojimanetwork/go-polka-rpc/v4/client"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/client"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 )
 
 // QueryStorage queries historical storage entries (by key) starting from a start block until an end block

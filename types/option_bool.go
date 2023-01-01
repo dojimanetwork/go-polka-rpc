@@ -19,7 +19,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
 )
 
 // OptionBool is a structure that can store a Bool or a missing value

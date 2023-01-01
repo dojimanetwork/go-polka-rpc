@@ -16,7 +16,7 @@
 
 package types
 
-import "github.com/dojimanetwork/go-polka-rpc/v4/scale"
+import "github.com/dojimanetwork/go-polka-rpc/v5/scale"
 
 // OptionBytes is a structure that can store a Bytes or a missing value
 type OptionBytes struct {

@@ -23,9 +23,9 @@ import (
 	"path"
 	"testing"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 )
 
 //go:generate go run ./test-gen test_data meta_bytes storage_bytes

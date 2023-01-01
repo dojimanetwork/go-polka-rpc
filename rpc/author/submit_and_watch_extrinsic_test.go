@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"testing"
 
-	gsrpc "github.com/dojimanetwork/go-polka-rpc/v4"
-	"github.com/dojimanetwork/go-polka-rpc/v4/config"
-	"github.com/dojimanetwork/go-polka-rpc/v4/rpc/author"
-	"github.com/dojimanetwork/go-polka-rpc/v4/signature"
-	"github.com/dojimanetwork/go-polka-rpc/v4/types"
+	gsrpc "github.com/dojimanetwork/go-polka-rpc/v5"
+	"github.com/dojimanetwork/go-polka-rpc/v5/config"
+	"github.com/dojimanetwork/go-polka-rpc/v5/rpc/author"
+	"github.com/dojimanetwork/go-polka-rpc/v5/signature"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 	"github.com/stretchr/testify/assert"
 )
 

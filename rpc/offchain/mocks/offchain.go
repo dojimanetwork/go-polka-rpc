@@ -3,8 +3,8 @@
 package mocks
 
 import (
-	offchain "github.com/dojimanetwork/go-polka-rpc/v4/rpc/offchain"
-	types "github.com/dojimanetwork/go-polka-rpc/v4/types"
+	offchain "github.com/dojimanetwork/go-polka-rpc/v5/rpc/offchain"
+	types "github.com/dojimanetwork/go-polka-rpc/v5/types"
 	mock "github.com/stretchr/testify/mock"
 )
 

@@ -19,7 +19,7 @@ package types
 import (
 	"encoding/json"
 
-	"github.com/dojimanetwork/go-polka-rpc/v4/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
 )
 
 // Digest contains logs
