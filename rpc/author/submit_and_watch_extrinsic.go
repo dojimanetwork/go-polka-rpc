@@ -82,3 +82,17 @@ func (a *author) SubmitAndWatchExtrinsic(xt types.Extrinsic) (*ExtrinsicStatusSu
 
 	return &ExtrinsicStatusSubscription{sub: sub, channel: c}, nil
 }
+
+func (a *author) SubmitBytesAndWatchExtrinsic(payload string) (*ExtrinsicStatusSubscription, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), config.Default().SubscribeTimeout)
+	defer cancel()
+
+	c := make(chan types.ExtrinsicStatus)
+	sub, err := a.client.Subscribe(ctx, "author", "submitAndWatchExtrinsic", "unwatchExtrinsic", "extrinsicUpdate",
+		c, payload)
+	if err != nil {
+		return nil, err
+	}
+
+	return &ExtrinsicStatusSubscription{sub: sub, channel: c}, nil
+}
