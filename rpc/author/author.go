@@ -27,6 +27,7 @@ type Author interface {
 	SubmitAndWatchExtrinsic(xt types.Extrinsic) (*ExtrinsicStatusSubscription, error)
 	PendingExtrinsics() ([]types.Extrinsic, error)
 	SubmitExtrinsic(xt types.Extrinsic) (types.Hash, error)
+	SubmitBytesAndWatchExtrinsic(payload string) (*ExtrinsicStatusSubscription, error)
 }
 
 // author exposes methods for authoring of network items
