@@ -21,7 +21,7 @@ import "github.com/dojimanetwork/go-polka-rpc/v5/scale"
 // MultiSignature
 type MultiSignature struct {
 	IsEd25519 bool           // 0:: Ed25519(Ed25519Signature)
-	AsEd25519 []byte         // Ed25519Signature
+	AsEd25519 Signature      // Ed25519Signature
 	IsSr25519 bool           // 1:: Sr25519(Sr25519Signature)
 	AsSr25519 Signature      // Sr25519Signature
 	IsEcdsa   bool           // 2:: Ecdsa(EcdsaSignature)
