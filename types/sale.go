@@ -16,7 +16,10 @@
 
 package types
 
-import "github.com/dojimanetwork/go-polka-rpc/v5/scale"
+import (
+	"errors"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
+)
 
 type Tranche struct {
 	FirstVal  U64
