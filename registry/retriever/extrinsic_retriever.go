@@ -22,8 +22,8 @@ type ExtrinsicRetriever[A, S, P any] interface {
 
 // extrinsicRetriever implements the ExtrinsicRetriever interface.
 type extrinsicRetriever[
-A, S, P any,
-B generic.GenericSignedBlock[A, S, P],
+	A, S, P any,
+	B generic.GenericSignedBlock[A, S, P],
 ] struct {
 	extrinsicParser parser.ExtrinsicParser[A, S, P]
 
@@ -41,8 +41,8 @@ B generic.GenericSignedBlock[A, S, P],
 
 // NewExtrinsicRetriever creates a new ExtrinsicRetriever.
 func NewExtrinsicRetriever[
-A, S, P any,
-B generic.GenericSignedBlock[A, S, P],
+	A, S, P any,
+	B generic.GenericSignedBlock[A, S, P],
 ](
 	extrinsicParser parser.ExtrinsicParser[A, S, P],
 	genericChain generic.Chain[A, S, P, B],
