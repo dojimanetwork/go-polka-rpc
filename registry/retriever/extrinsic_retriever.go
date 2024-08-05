@@ -1,12 +1,12 @@
 package retriever
 
 import (
-	"github.com/centrifuge/go-substrate-rpc-client/v4/registry"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/registry/exec"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/registry/parser"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpc/chain/generic"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpc/state"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/registry"
+	"github.com/dojimanetwork/go-polka-rpc/v5/registry/exec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/registry/parser"
+	"github.com/dojimanetwork/go-polka-rpc/v5/rpc/chain/generic"
+	"github.com/dojimanetwork/go-polka-rpc/v5/rpc/state"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 )
 
 //nolint:lll
@@ -22,8 +22,8 @@ type ExtrinsicRetriever[A, S, P any] interface {
 
 // extrinsicRetriever implements the ExtrinsicRetriever interface.
 type extrinsicRetriever[
-	A, S, P any,
-	B generic.GenericSignedBlock[A, S, P],
+A, S, P any,
+B generic.GenericSignedBlock[A, S, P],
 ] struct {
 	extrinsicParser parser.ExtrinsicParser[A, S, P]
 
@@ -41,8 +41,8 @@ type extrinsicRetriever[
 
 // NewExtrinsicRetriever creates a new ExtrinsicRetriever.
 func NewExtrinsicRetriever[
-	A, S, P any,
-	B generic.GenericSignedBlock[A, S, P],
+A, S, P any,
+B generic.GenericSignedBlock[A, S, P],
 ](
 	extrinsicParser parser.ExtrinsicParser[A, S, P],
 	genericChain generic.Chain[A, S, P, B],

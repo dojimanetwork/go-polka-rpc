@@ -15,7 +15,7 @@ This package is feature complete, but it is relatively new and might still conta
 
 ## Documentation & Usage Examples
 
-Please refer to https://godoc.org/github.com/centrifuge/go-substrate-rpc-client/v4
+Please refer to https://godoc.org/github.com/dojimanetwork/go-polka-rpc/v5
 
 ### Usage test examples of Dynamic Parsing of events & extrinsics
 [Registry docs](registry/REGISTRY.md)

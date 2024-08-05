@@ -1,9 +1,9 @@
 package generic
 
 import (
-	"github.com/centrifuge/go-substrate-rpc-client/v4/client"
-	libErr "github.com/centrifuge/go-substrate-rpc-client/v4/error"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/client"
+	libErr "github.com/dojimanetwork/go-polka-rpc/v5/error"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 )
 
 const (

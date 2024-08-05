@@ -4,12 +4,12 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/centrifuge/go-substrate-rpc-client/v4/registry"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/registry/exec"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/registry/parser"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/registry/state"
-	stateMocks "github.com/centrifuge/go-substrate-rpc-client/v4/rpc/state/mocks"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/registry"
+	"github.com/dojimanetwork/go-polka-rpc/v5/registry/exec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/registry/parser"
+	"github.com/dojimanetwork/go-polka-rpc/v5/registry/state"
+	stateMocks "github.com/dojimanetwork/go-polka-rpc/v5/rpc/state/mocks"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )

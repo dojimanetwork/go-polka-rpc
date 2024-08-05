@@ -3,12 +3,12 @@ package retriever
 import (
 	"time"
 
-	"github.com/centrifuge/go-substrate-rpc-client/v4/registry"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/registry/exec"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/registry/parser"
-	regState "github.com/centrifuge/go-substrate-rpc-client/v4/registry/state"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpc/state"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/registry"
+	"github.com/dojimanetwork/go-polka-rpc/v5/registry/exec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/registry/parser"
+	regState "github.com/dojimanetwork/go-polka-rpc/v5/registry/state"
+	"github.com/dojimanetwork/go-polka-rpc/v5/rpc/state"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 )
 
 //nolint:lll
