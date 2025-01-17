@@ -19,15 +19,15 @@
 package author
 
 import (
-	"github.com/dojimanetwork/go-polka-rpc/v5/client"
-	"github.com/dojimanetwork/go-polka-rpc/v5/types"
+	"github.com/centrifuge/go-substrate-rpc-client/v4/client"
+	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	"github.com/centrifuge/go-substrate-rpc-client/v4/types/extrinsic"
 )
 
 type Author interface {
-	SubmitAndWatchExtrinsic(xt types.Extrinsic) (*ExtrinsicStatusSubscription, error)
-	PendingExtrinsics() ([]types.Extrinsic, error)
-	SubmitExtrinsic(xt types.Extrinsic) (types.Hash, error)
-	SubmitBytesAndWatchExtrinsic(payload string) (*ExtrinsicStatusSubscription, error)
+	SubmitAndWatchExtrinsic(xt extrinsic.Extrinsic) (*ExtrinsicStatusSubscription, error)
+	SubmitExtrinsic(xt extrinsic.Extrinsic) (types.Hash, error)
+	PendingExtrinsics() ([]string, error)
 }
 
 // author exposes methods for authoring of network items

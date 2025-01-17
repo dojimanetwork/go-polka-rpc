@@ -19,6 +19,8 @@ package types_test
 import (
 	"testing"
 
+	. "github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	. "github.com/centrifuge/go-substrate-rpc-client/v4/types/test_utils"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -122,15 +124,6 @@ var exampleDoubleMapTypeV4 = DoubleMapTypeV4{
 }
 
 var exampleFunctionArgumentMetadata = FunctionArgumentMetadata{Name: "myFunctionName", Type: "myType"}
-
-func TestMetadataV4_Decode(t *testing.T) {
-	metadata := NewMetadataV4()
-
-	err := Decode(MustHexDecodeString(ExamplaryMetadataV4String), metadata)
-	assert.NoError(t, err)
-
-	assert.Equal(t, *ExamplaryMetadataV4, *metadata)
-}
 
 func TestMetadataV4_EncodeDecode(t *testing.T) {
 	AssertRoundtrip(t, exampleMetadataV4)

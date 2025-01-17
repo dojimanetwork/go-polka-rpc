@@ -25,26 +25,20 @@ import (
 
 var (
 	testAssetID1 = AssetID{
-		IsConcrete:    true,
-		MultiLocation: testMultiLocationV1n1,
+		Parents:  1,
+		Interior: testJunctionsV1n1,
 	}
 	testAssetID2 = AssetID{
-		IsAbstract:  true,
-		AbstractKey: []U8{6, 7, 4},
+		Parents:  1,
+		Interior: testJunctionsV1n2,
 	}
 
 	assetIDFuzzOpts = CombineFuzzOpts(
-		multiLocationV1FuzzOpts,
+		junctionsV1FuzzOpts,
 		[]FuzzOpt{
 			WithFuzzFuncs(func(a *AssetID, c fuzz.Continue) {
-				if c.RandBool() {
-					a.IsConcrete = true
-					c.Fuzz(&a.MultiLocation)
-					return
-				}
-
-				a.IsAbstract = true
-				c.Fuzz(&a.AbstractKey)
+				c.Fuzz(&a.Parents)
+				c.Fuzz(&a.Interior)
 			}),
 		},
 	)
@@ -53,20 +47,20 @@ var (
 func TestAssetID_EncodeDecode(t *testing.T) {
 	AssertRoundTripFuzz[AssetID](t, 100, assetIDFuzzOpts...)
 	AssertDecodeNilData[AssetID](t)
-	AssertEncodeEmptyObj[AssetID](t, 0)
+	AssertEncodeEmptyObj[AssetID](t, 1)
 }
 
 func TestAssetID_Encode(t *testing.T) {
 	AssertEncode(t, []EncodingAssert{
-		{testAssetID1, MustHexDecodeString("0x000408002c01000c010203020010000000000000000303000404052a0000000000000000000000000000000608060807")},
-		{testAssetID2, MustHexDecodeString("0x010c060704")},
+		{testAssetID1, MustHexDecodeString("0x0100")},
+		{testAssetID2, MustHexDecodeString("0x0101002c")},
 	})
 }
 
 func TestAssetID_Decode(t *testing.T) {
 	AssertDecode(t, []DecodingAssert{
-		{MustHexDecodeString("0x000408002c01000c010203020010000000000000000303000404052a0000000000000000000000000000000608060807"), testAssetID1},
-		{MustHexDecodeString("0x010c060704"), testAssetID2},
+		{MustHexDecodeString("0x0100"), testAssetID1},
+		{MustHexDecodeString("0x0101002c"), testAssetID2},
 	})
 }
 
@@ -226,18 +220,18 @@ var (
 func TestMultiAssetV1_EncodeDecode(t *testing.T) {
 	AssertRoundTripFuzz[MultiAssetV1](t, 1000, multiAssetV1FuzzOpts...)
 	AssertDecodeNilData[MultiAssetV1](t)
-	AssertEncodeEmptyObj[MultiAssetV1](t, 0)
+	AssertEncodeEmptyObj[MultiAssetV1](t, 1)
 }
 
 func TestMultiAssetV1_Encode(t *testing.T) {
 	AssertEncode(t, []EncodingAssert{
 		{
 			testMultiAssetV1,
-			MustHexDecodeString("0x010c06070400ed01"),
+			MustHexDecodeString("0x0101002c00ed01"),
 		},
 		{
 			testMultiAssetV2,
-			MustHexDecodeString("0x000408002c01000c010203020010000000000000000303000404052a0000000000000000000000000000000608060807010201020304"),
+			MustHexDecodeString("0x0100010201020304"),
 		},
 	})
 }
@@ -245,11 +239,11 @@ func TestMultiAssetV1_Encode(t *testing.T) {
 func TestMultiAssetV1_Decode(t *testing.T) {
 	AssertDecode(t, []DecodingAssert{
 		{
-			MustHexDecodeString("0x010c06070400ed01"),
+			MustHexDecodeString("0x0101002c00ed01"),
 			testMultiAssetV1,
 		},
 		{
-			MustHexDecodeString("0x000408002c01000c010203020010000000000000000303000404052a0000000000000000000000000000000608060807010201020304"),
+			MustHexDecodeString("0x0100010201020304"),
 			testMultiAssetV2,
 		},
 	})
@@ -268,7 +262,7 @@ func TestMultiAssetsV1_Encode(t *testing.T) {
 	AssertEncode(t, []EncodingAssert{
 		{
 			testMultiAssetsV1,
-			MustHexDecodeString("0x08010c06070400ed01000408002c01000c010203020010000000000000000303000404052a0000000000000000000000000000000608060807010201020304"),
+			MustHexDecodeString("0x080101002c00ed010100010201020304"),
 		},
 	})
 }
@@ -276,7 +270,7 @@ func TestMultiAssetsV1_Encode(t *testing.T) {
 func TestMultiAssetsV1_Decode(t *testing.T) {
 	AssertDecode(t, []DecodingAssert{
 		{
-			MustHexDecodeString("0x08010c06070400ed01000408002c01000c010203020010000000000000000303000404052a0000000000000000000000000000000608060807010201020304"),
+			MustHexDecodeString("0x080101002c00ed010100010201020304"),
 			testMultiAssetsV1,
 		},
 	})
@@ -478,7 +472,7 @@ func TestVersionedMultiAssets_Encode(t *testing.T) {
 		},
 		{
 			testVersionedMultiAssets2,
-			MustHexDecodeString("0x0108010c06070400ed01000408002c01000c010203020010000000000000000303000404052a0000000000000000000000000000000608060807010201020304"),
+			MustHexDecodeString("0x01080101002c00ed010100010201020304"),
 		},
 	})
 }
@@ -490,7 +484,7 @@ func TestVersionedMultiAssets_Decode(t *testing.T) {
 			testVersionedMultiAssets1,
 		},
 		{
-			MustHexDecodeString("0x0108010c06070400ed01000408002c01000c010203020010000000000000000303000404052a0000000000000000000000000000000608060807010201020304"),
+			MustHexDecodeString("0x01080101002c00ed010100010201020304"),
 			testVersionedMultiAssets2,
 		},
 	})
@@ -548,7 +542,7 @@ func TestResponse_EncodeDecode(t *testing.T) {
 func TestResponse_Encode(t *testing.T) {
 	AssertEncode(t, []EncodingAssert{
 		{testResponse1, MustHexDecodeString("0x00")},
-		{testResponse2, MustHexDecodeString("0x0108010c06070400ed01000408002c01000c010203020010000000000000000303000404052a0000000000000000000000000000000608060807010201020304")},
+		{testResponse2, MustHexDecodeString("0x01080101002c00ed010100010201020304")},
 		{testResponse3, MustHexDecodeString("0x020100000000")},
 		{testResponse4, MustHexDecodeString("0x03af010000")},
 	})
@@ -557,7 +551,7 @@ func TestResponse_Encode(t *testing.T) {
 func TestResponse_Decode(t *testing.T) {
 	AssertDecode(t, []DecodingAssert{
 		{MustHexDecodeString("0x00"), testResponse1},
-		{MustHexDecodeString("0x0108010c06070400ed01000408002c01000c010203020010000000000000000303000404052a0000000000000000000000000000000608060807010201020304"), testResponse2},
+		{MustHexDecodeString("0x01080101002c00ed010100010201020304"), testResponse2},
 		{MustHexDecodeString("0x020100000000"), testResponse3},
 		{MustHexDecodeString("0x03af010000"), testResponse4},
 	})
@@ -713,14 +707,14 @@ func TestWildMultiAsset_EncodeDecode(t *testing.T) {
 func TestWildMultiAsset_Encode(t *testing.T) {
 	AssertEncode(t, []EncodingAssert{
 		{testWildMultiAsset1, MustHexDecodeString("0x00")},
-		{testWildMultiAsset2, MustHexDecodeString("0x01010c06070400")},
+		{testWildMultiAsset2, MustHexDecodeString("0x010101002c00")},
 	})
 }
 
 func TestWildMultiAsset_Decode(t *testing.T) {
 	AssertDecode(t, []DecodingAssert{
 		{MustHexDecodeString("0x00"), testWildMultiAsset1},
-		{MustHexDecodeString("0x01010c06070400"), testWildMultiAsset2},
+		{MustHexDecodeString("0x010101002c00"), testWildMultiAsset2},
 	})
 }
 
@@ -761,7 +755,7 @@ func TestMultiAssetFilter_Encode(t *testing.T) {
 	AssertEncode(t, []EncodingAssert{
 		{
 			testMultiAssetFilter1,
-			MustHexDecodeString("0x0008010c06070400ed01000408002c01000c010203020010000000000000000303000404052a0000000000000000000000000000000608060807010201020304"),
+			MustHexDecodeString("0x00080101002c00ed010100010201020304"),
 		},
 		{
 			testMultiAssetFilter2,
@@ -773,7 +767,7 @@ func TestMultiAssetFilter_Encode(t *testing.T) {
 func TestMultiAssetFilter_Decode(t *testing.T) {
 	AssertDecode(t, []DecodingAssert{
 		{
-			MustHexDecodeString("0x0008010c06070400ed01000408002c01000c010203020010000000000000000303000404052a0000000000000000000000000000000608060807010201020304"),
+			MustHexDecodeString("0x00080101002c00ed010100010201020304"),
 			testMultiAssetFilter1,
 		},
 		{

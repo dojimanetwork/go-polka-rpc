@@ -16,25 +16,13 @@
 
 package author
 
-import (
-	"github.com/dojimanetwork/go-polka-rpc/v5/types"
-	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
-)
-
-// PendingExtrinsics returns all pending extrinsics, potentially grouped by sender
-func (a *author) PendingExtrinsics() ([]types.Extrinsic, error) {
-	var res []string
-	err := a.client.Call(&res, "author_pendingExtrinsics")
+// PendingExtrinsics returns all pending extrinsics.
+func (a *author) PendingExtrinsics() ([]string, error) {
+	var extrinsics []string
+	err := a.client.Call(&extrinsics, "author_pendingExtrinsics")
 	if err != nil {
 		return nil, err
 	}
 
-	xts := make([]types.Extrinsic, len(res))
-	for i, re := range res {
-		err = codec.DecodeFromHex(re, &xts[i])
-		if err != nil {
-			return nil, err
-		}
-	}
-	return xts, err
+	return extrinsics, nil
 }

@@ -20,10 +20,11 @@ import (
 	"context"
 	"sync"
 
-	"github.com/dojimanetwork/go-polka-rpc/v5/config"
-	gethrpc "github.com/dojimanetwork/go-polka-rpc/v5/gethrpc"
-	"github.com/dojimanetwork/go-polka-rpc/v5/types"
-	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
+	"github.com/centrifuge/go-substrate-rpc-client/v4/config"
+	gethrpc "github.com/centrifuge/go-substrate-rpc-client/v4/gethrpc"
+	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	"github.com/centrifuge/go-substrate-rpc-client/v4/types/codec"
+	"github.com/centrifuge/go-substrate-rpc-client/v4/types/extrinsic"
 )
 
 // ExtrinsicStatusSubscription is a subscription established through one of the Client's subscribe methods.
@@ -63,33 +64,23 @@ func (s *ExtrinsicStatusSubscription) Unsubscribe() {
 
 // SubmitAndWatchExtrinsic will submit and subscribe to watch an extrinsic until unsubscribed, returning a subscription
 // that will receive server notifications containing the extrinsic status updates.
-func (a *author) SubmitAndWatchExtrinsic(xt types.Extrinsic) (*ExtrinsicStatusSubscription, error) { //nolint:lll
-	ctx, cancel := context.WithTimeout(context.Background(), config.Default().SubscribeTimeout)
-	defer cancel()
-
-	c := make(chan types.ExtrinsicStatus)
-
-	enc, err := codec.EncodeToHex(xt)
+func (a *author) SubmitAndWatchExtrinsic(xt extrinsic.Extrinsic) (*ExtrinsicStatusSubscription, error) { //nolint:lll
+	hexEncodedExtrinsic, err := codec.EncodeToHex(xt)
 	if err != nil {
 		return nil, err
 	}
 
-	sub, err := a.client.Subscribe(ctx, "author", "submitAndWatchExtrinsic", "unwatchExtrinsic", "extrinsicUpdate",
-		c, enc)
-	if err != nil {
-		return nil, err
-	}
-
-	return &ExtrinsicStatusSubscription{sub: sub, channel: c}, nil
+	return a.submitAndWatchExtrinsic(hexEncodedExtrinsic)
 }
 
-func (a *author) SubmitBytesAndWatchExtrinsic(payload string) (*ExtrinsicStatusSubscription, error) {
+func (a *author) submitAndWatchExtrinsic(hexEncodedExtrinsic string) (*ExtrinsicStatusSubscription, error) { //nolint:lll
 	ctx, cancel := context.WithTimeout(context.Background(), config.Default().SubscribeTimeout)
 	defer cancel()
 
 	c := make(chan types.ExtrinsicStatus)
+
 	sub, err := a.client.Subscribe(ctx, "author", "submitAndWatchExtrinsic", "unwatchExtrinsic", "extrinsicUpdate",
-		c, payload)
+		c, hexEncodedExtrinsic)
 	if err != nil {
 		return nil, err
 	}
