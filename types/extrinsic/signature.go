@@ -1,9 +1,9 @@
 package extrinsic
 
 import (
-	libErr "github.com/centrifuge/go-substrate-rpc-client/v4/error"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/scale"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	libErr "github.com/dojimanetwork/go-polka-rpc/v5/error"
+	"github.com/dojimanetwork/go-polka-rpc/v5/scale"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
 )
 
 const (

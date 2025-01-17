@@ -1,8 +1,8 @@
 package extrinsic
 
 import (
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types/extrinsic/extensions"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/extrinsic/extensions"
 )
 
 // SignedFieldValues is a map that holds a value for a particular SignedFieldName.

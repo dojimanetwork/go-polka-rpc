@@ -3,7 +3,7 @@
 package retriever
 
 import (
-	gsrpc "github.com/centrifuge/go-substrate-rpc-client/v4"
+	gsrpc "github.com/dojimanetwork/go-polka-rpc/v5"
 	"log"
 	"os"
 	"strconv"

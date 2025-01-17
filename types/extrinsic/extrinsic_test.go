@@ -17,10 +17,10 @@
 package extrinsic
 
 import (
-	"github.com/centrifuge/go-substrate-rpc-client/v4/signature"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types/codec"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types/extrinsic/extensions"
+	"github.com/dojimanetwork/go-polka-rpc/v5/signature"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/extrinsic/extensions"
 	"github.com/stretchr/testify/assert"
 	"strings"
 	"testing"

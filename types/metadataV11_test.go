@@ -19,7 +19,7 @@ package types_test
 import (
 	"testing"
 
-	. "github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	. "github.com/dojimanetwork/go-polka-rpc/v5/types"
 	"github.com/stretchr/testify/assert"
 )
 

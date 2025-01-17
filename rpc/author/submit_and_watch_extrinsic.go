@@ -20,11 +20,11 @@ import (
 	"context"
 	"sync"
 
-	"github.com/centrifuge/go-substrate-rpc-client/v4/config"
-	gethrpc "github.com/centrifuge/go-substrate-rpc-client/v4/gethrpc"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types/codec"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types/extrinsic"
+	"github.com/dojimanetwork/go-polka-rpc/v5/config"
+	gethrpc "github.com/dojimanetwork/go-polka-rpc/v5/gethrpc"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/codec"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/extrinsic"
 )
 
 // ExtrinsicStatusSubscription is a subscription established through one of the Client's subscribe methods.

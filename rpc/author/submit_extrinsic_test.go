@@ -18,7 +18,7 @@ package author_test
 
 import (
 	"fmt"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types/extrinsic"
+	"github.com/dojimanetwork/go-polka-rpc/v5/types/extrinsic"
 	"testing"
 
 	gsrpc "github.com/dojimanetwork/go-polka-rpc/v5"
